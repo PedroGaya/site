@@ -10,5 +10,23 @@ module.exports = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: "class",
+  theme: {
+    extend: {
+      typography: (theme) => {
+        return {
+          DEFAULT: {
+            css: {
+              pre: {
+                backgroundColor: "#272822",
+              },
+              code: {
+                backgroundColor: "transparent",
+              },
+            },
+          },
+        };
+      },
+    },
+  },
   plugins: [nextui(), require("@tailwindcss/typography")],
 };

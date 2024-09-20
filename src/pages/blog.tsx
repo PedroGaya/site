@@ -12,9 +12,13 @@ export default function DocsPage() {
   
   \`\`\`js
     function test() {
-      console.log("notice the blank line before this function?");
+      console.log("wowzers!");
     }
   \`\`\`
+
+  And here's a [google link!](https://google.com)
+
+  [Home](/) links too!
   `;
 
   const post = {
