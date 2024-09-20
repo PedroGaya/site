@@ -11,7 +11,7 @@ export default function DocsPage() {
           <h1 className={title()}>Blog</h1>
         </div>
         <div className="prose lg:prose-xl">
-            <MD />
+          <MD />
         </div>
       </section>
     </DefaultLayout>
@@ -35,9 +35,5 @@ function MD() {
   \`\`\`
   `;
 
-  return (
-    <ReactMarkdown rehypePlugins={[rehypeRaw]}>
-      {md}
-    </ReactMarkdown>
-  );
+  return <ReactMarkdown rehypePlugins={[rehypeRaw]}>{md}</ReactMarkdown>;
 }
