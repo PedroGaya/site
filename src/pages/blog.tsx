@@ -2,7 +2,7 @@ import BlogPost from "./post";
 
 export default function DocsPage() {
   const content = `
-  Hello this **video** is embeded from Youtube!
+  Hello, this **video** is embeded from Youtube!
 
   <div style="display: flex; justify-content: center;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/JQvc-Gkwhow?si=eFOjL6lGKQXFZmHJ" title="My Favorite Things" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -19,8 +19,8 @@ export default function DocsPage() {
 
   const post = {
     title: "Blog Post",
-    subtitle: "A test, in lorem ipsum.",
-    tags: [],
+    subtitle: "A test, in lorem ipsum. This blog post is not meant to be seen!",
+    tags: ["test", "your", "stuff!"],
     content: content,
   };
   return <BlogPost post={post} />;
