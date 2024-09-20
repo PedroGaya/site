@@ -1,7 +1,10 @@
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+
+import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
+import javascript from "react-syntax-highlighter/dist/esm/languages/prism/javascript";
+SyntaxHighlighter.registerLanguage("js", javascript);
 import { okaidia } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 import { Chip } from "@nextui-org/chip";
