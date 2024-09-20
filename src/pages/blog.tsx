@@ -1,25 +1,7 @@
-import { title } from "@/components/primitives";
-import DefaultLayout from "@/layouts/default";
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
+import BlogPost from "./post";
 
 export default function DocsPage() {
-  return (
-    <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="inline-block max-w-lg text-center justify-center">
-          <h1 className={title()}>Blog</h1>
-        </div>
-        <div className="prose lg:prose-xl">
-          <MD />
-        </div>
-      </section>
-    </DefaultLayout>
-  );
-}
-
-function MD() {
-  const md = `
+  const content = `
   Hello this **video** is embeded from Youtube!
 
   <div style="display: flex; justify-content: center;">
@@ -35,5 +17,11 @@ function MD() {
   \`\`\`
   `;
 
-  return <ReactMarkdown rehypePlugins={[rehypeRaw]}>{md}</ReactMarkdown>;
+  const post = {
+    title: "Blog Post",
+    subtitle: "A test, in lorem ipsum.",
+    tags: [],
+    content: content,
+  };
+  return <BlogPost post={post} />;
 }
