@@ -28,5 +28,21 @@ module.exports = {
       },
     },
   },
-  plugins: [nextui(), require("@tailwindcss/typography")],
+  plugins: [
+    nextui({
+      themes: {
+        light: {
+          colors: {
+            background: "#f0f0f0",
+          },
+        },
+        dark: {
+          colors: {
+            background: "#18181b",
+          },
+        },
+      },
+    }),
+    require("@tailwindcss/typography"),
+  ],
 };

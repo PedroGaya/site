@@ -28,6 +28,7 @@ export default function BlogPost(props: { post: BlogPost }) {
           <h1 className={article({ subtitle: true })}>{post.subtitle}</h1>
         </div>
         <Markdown content={post.content} />
+
         <div>
           {post.tags.map((tag, index) => (
             <Chip
@@ -37,7 +38,7 @@ export default function BlogPost(props: { post: BlogPost }) {
               key={index}
               variant="flat"
             >
-              {tag}
+              {`#${tag}`}
             </Chip>
           ))}
         </div>

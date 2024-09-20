@@ -1,6 +1,5 @@
 import { tv } from "tailwind-variants";
 
-// TODO: remove this
 export const title = tv({
   base: "tracking-tight inline font-semibold",
   variants: {
@@ -18,7 +17,6 @@ export const title = tv({
   },
 });
 
-// TODO: remove this
 export const subtitle = tv({
   base: "w-full md:w-1/2 my-2 text-lg lg:text-xl text-default-600 block max-w-full",
   variants: {
