@@ -5,12 +5,12 @@ export const siteConfig = {
   description: "phgw.dev",
   navItems: [
     {
-      label: "Home",
-      href: "/",
-    },
-    {
       label: "Blog",
       href: "/blog",
+    },
+    {
+      label: "About",
+      href: "/about-me",
     },
   ],
   navMenuItems: [
@@ -28,6 +28,8 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/nextui-org/nextui",
+    github: "https://github.com/PedroGaya",
+    email: "mailto:pedrohenriquegaya@gmail.com",
+    rss: "",
   },
 };

@@ -1,5 +1,7 @@
 import { Navbar } from "@/components/navbar";
+import { siteConfig } from "@/config/site";
 import { Divider } from "@nextui-org/divider";
+import { Link } from "@nextui-org/link";
 
 export default function DefaultLayout({
   children,
@@ -16,7 +18,8 @@ export default function DefaultLayout({
       <footer className="w-full flex items-center justify-center py-3">
         <div className="flex items-center gap-1 text-current">
           <span className="text-default-600">
-            Made and copyrighted by me | pedrohenriquegaya@gmail.com
+            <Link href={siteConfig.links.email}>email</Link> |{" "}
+            <Link href={siteConfig.links.rss}>rss</Link> | © 2024 - present
           </span>
         </div>
       </footer>
