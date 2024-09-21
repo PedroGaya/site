@@ -19,6 +19,21 @@ export default function DocsPage() {
   And here's a [google link!](https://google.com)
 
   [Home](/) links too!
+
+  > Blockquotes?
+  >
+  >> They work too.
+
+  1. I
+  2. Love 
+  3. Lists!
+
+  - Even
+  - The
+  - Unordered
+    - Ones!
+
+  ![image](https://preview.redd.it/ux9kq212n5qd1.png?auto=webp&s=0f9c38f044c1433b9428f170d1f7b672f4ead89f)
   `;
 
   const post = {
