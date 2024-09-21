@@ -17,18 +17,14 @@ import { useState } from "react";
 
 export default function BlogPost(props: { post: BlogPost }) {
   const { post } = props;
-
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
         <div className="inline-block max-w-lg text-center justify-center">
           <h1 className={article({ title: true })}>{post.title}</h1>
-        </div>
-        <div className="inline-block max-w-lg text-center justify-center">
           <h1 className={article({ subtitle: true })}>{post.subtitle}</h1>
         </div>
         <Markdown content={post.content} />
-
         <div>
           {post.tags.map((tag, index) => (
             <Chip
@@ -55,7 +51,7 @@ function Markdown(props: { content: string }) {
   const handleCopy = (code: string) => {
     navigator.clipboard.writeText(code).then(() => {
       setCopied(true);
-      setTimeout(() => setCopied(false), 1000); // Reset after 2 seconds
+      setTimeout(() => setCopied(false), 1000);
     });
   };
 

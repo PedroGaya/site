@@ -36,7 +36,7 @@ export const article = tv({
       true: "prose-lg",
     },
     title: {
-      true: "text-[2.3rem] leading-9 font-semibold",
+      true: "text-[2.3rem] leading-9 font-semibold mb-4",
     },
     subtitle: {
       true: "text-[1rem] italic",
