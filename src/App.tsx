@@ -4,6 +4,7 @@ import IndexPage from "@/pages/index";
 import BlogPage from "@/pages/blog";
 import AboutPage from "@/pages/about";
 import ContactPage from "@/pages/contact";
+import ResumePage from "./pages/resume";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route element={<BlogPage />} path="/blog" />
       <Route element={<AboutPage />} path="/about-me" />
       <Route element={<ContactPage />} path="/contact" />
+      <Route element={<ResumePage />} path="/resume" />
     </Routes>
   );
 }
