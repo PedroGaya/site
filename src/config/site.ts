@@ -31,8 +31,12 @@ export const siteConfig = {
       href: "/blog",
     },
     {
-      label: "Help & Feedback",
-      href: "/help-feedback",
+      label: "Contact",
+      href: "/contact",
+    },
+    {
+      label: "Résumé",
+      href: "/resume",
     },
   ],
   links: {

@@ -11,7 +11,7 @@ export default function IndexPage() {
       <section className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10">
         <div className="flex flex-row items-center justify-center">
           <IntroductoryText />
-          <CardGrid />
+          <CardGrid className="max-sm:hidden" />
         </div>
         <Divider className="my-8" />
       </section>
@@ -46,54 +46,56 @@ function IntroductoryText() {
   );
 }
 
-function CardGrid() {
+function CardGrid({ ...props }) {
   return (
-    <div className="max-w-[900px] gap-2 grid grid-cols-12 grid-rows-1 px-8">
-      <Card className="col-span-12 sm:col-span-4 h-[300px]">
-        <Image
-          removeWrapper
-          alt="Me, playing bass."
-          className="z-0 w-full h-full object-cover"
-          src="/me.jpg"
-        />
-        <CardFooter className="absolute bg-neutral-400/80 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
-          <div>
-            <p className="text-black text-tiny font-bold">
-              Me, playing bass at an event.
-            </p>
-          </div>
-        </CardFooter>
-      </Card>
-      <Card className="col-span-12 sm:col-span-4 h-[300px]">
-        <Image
-          removeWrapper
-          alt="The cats, looking cute."
-          className="z-0 w-full h-full object-cover"
-          src="/my-cats.jpg"
-        />
-        <CardFooter className="absolute bg-neutral-400/80 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
-          <div>
-            <p className="text-black text-tiny font-bold">
-              My cats, looking cute.
-            </p>
-          </div>
-        </CardFooter>
-      </Card>{" "}
-      <Card className="col-span-12 sm:col-span-4 h-[300px]">
-        <Image
-          removeWrapper
-          alt="The dog, looking goofy."
-          className="z-0 w-full h-full object-cover"
-          src="/my-dog.jpg"
-        />
-        <CardFooter className="absolute bg-neutral-400/80 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
-          <div>
-            <p className="text-black text-tiny font-bold">
-              My dog, looking goofy.
-            </p>
-          </div>
-        </CardFooter>
-      </Card>
+    <div className={props.className}>
+      <div className="max-w-[900px] gap-2 grid grid-cols-12 grid-rows-1 px-8">
+        <Card className="col-span-12 sm:col-span-4 h-[300px]">
+          <Image
+            removeWrapper
+            alt="Me, playing bass."
+            className="z-0 w-full h-full object-cover"
+            src="/me.jpg"
+          />
+          <CardFooter className="absolute bg-neutral-400/80 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
+            <div>
+              <p className="text-black text-tiny font-bold">
+                Me, playing bass at an event.
+              </p>
+            </div>
+          </CardFooter>
+        </Card>
+        <Card className="col-span-12 sm:col-span-4 h-[300px]">
+          <Image
+            removeWrapper
+            alt="The cats, looking cute."
+            className="z-0 w-full h-full object-cover"
+            src="/my-cats.jpg"
+          />
+          <CardFooter className="absolute bg-neutral-400/80 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
+            <div>
+              <p className="text-black text-tiny font-bold">
+                My cats, looking cute.
+              </p>
+            </div>
+          </CardFooter>
+        </Card>{" "}
+        <Card className="col-span-12 sm:col-span-4 h-[300px]">
+          <Image
+            removeWrapper
+            alt="The dog, looking goofy."
+            className="z-0 w-full h-full object-cover"
+            src="/my-dog.jpg"
+          />
+          <CardFooter className="absolute bg-neutral-400/80 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
+            <div>
+              <p className="text-black text-tiny font-bold">
+                My dog, looking goofy.
+              </p>
+            </div>
+          </CardFooter>
+        </Card>
+      </div>
     </div>
   );
 }
