@@ -5,12 +5,16 @@ export const siteConfig = {
   description: "phgw.dev",
   navItems: [
     {
+      label: "About",
+      href: "/about-me",
+    },
+    {
       label: "Blog",
       href: "/blog",
     },
     {
-      label: "About",
-      href: "/about-me",
+      label: "Contact",
+      href: "/contact",
     },
   ],
   navMenuItems: [
@@ -30,6 +34,7 @@ export const siteConfig = {
   links: {
     github: "https://github.com/PedroGaya",
     email: "mailto:pedrohenriquegaya@gmail.com",
+    twitter: "https://twitter.com/nd_wndr",
     rss: "",
   },
 };
