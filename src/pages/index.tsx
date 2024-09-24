@@ -4,16 +4,8 @@ import { Link } from "@nextui-org/link";
 import { Image } from "@nextui-org/image";
 import { Divider } from "@nextui-org/divider";
 import { Card, CardFooter } from "@nextui-org/card";
-import { useBlogStore } from "@/hooks/store";
-import { useEffect } from "react";
 
 export default function IndexPage() {
-  const update = useBlogStore((state) => state.updateState);
-
-  useEffect(() => {
-    update();
-  }, []);
-
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10">
