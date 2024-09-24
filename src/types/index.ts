@@ -5,8 +5,11 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
 };
 
 export type BlogPost = {
+  createdAt: Date;
   title: string;
   subtitle: string | null;
   content: string;
+  category: string | undefined;
+  series: string | undefined;
   tags: string[];
 };
