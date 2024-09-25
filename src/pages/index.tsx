@@ -5,7 +5,11 @@ import { Image } from "@nextui-org/image";
 import { Divider } from "@nextui-org/divider";
 import { Card, CardFooter } from "@nextui-org/card";
 
+import { useCategories } from "@/hooks/use-query";
+
 export default function IndexPage() {
+  const { isLoading, data } = useCategories();
+
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10">
@@ -14,6 +18,7 @@ export default function IndexPage() {
           <CardGrid className="max-sm:hidden" />
         </div>
         <Divider className="my-8" />
+        <div>{isLoading ? "loadin' categories" : data?.join(" | ")}</div>
       </section>
     </DefaultLayout>
   );
