@@ -5,10 +5,11 @@ import { Image } from "@nextui-org/image";
 import { Divider } from "@nextui-org/divider";
 import { Card, CardFooter } from "@nextui-org/card";
 
-import { useCategories } from "@/hooks/use-query";
+import { usePosts } from "@/hooks/use-query";
+import { BlogListItem } from "@/components/blog-list-item";
 
 export default function IndexPage() {
-  const { isLoading, data } = useCategories();
+  const { data } = usePosts();
 
   return (
     <DefaultLayout>
@@ -18,7 +19,11 @@ export default function IndexPage() {
           <CardGrid className="max-sm:hidden" />
         </div>
         <Divider className="my-8" />
-        <div>{isLoading ? "loadin' categories" : data?.join(" | ")}</div>
+        <div className="flex flex-col columns-2">
+          <div className="flex flex-col">
+            {data?.map((post) => <BlogListItem post={post}></BlogListItem>)}
+          </div>
+        </div>
       </section>
     </DefaultLayout>
   );

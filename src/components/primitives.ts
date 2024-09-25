@@ -48,3 +48,26 @@ export const article = tv({
     subtitle: false,
   },
 });
+
+export const blogListItem = tv({
+  base: "prose dark:prose-invert",
+  variants: {
+    title: {
+      true: "text-[1.5rem] leading-snug font-bold",
+    },
+    date: {
+      true: "text-[0.9rem] leading-snug italic",
+    },
+    subtitle: {
+      true: "my-2",
+    },
+    readMore: {
+      true: "text-[1.1rem] leading-snug font-semibold",
+    },
+  },
+  defaultVariants: {
+    body: false,
+    title: false,
+    subtitle: false,
+  },
+});
