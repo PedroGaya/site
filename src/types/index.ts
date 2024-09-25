@@ -6,6 +6,7 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
 
 export type BlogPost = {
   createdAt: Date;
+  key: string;
   title: string;
   subtitle: string | null;
   content: string;
