@@ -5,11 +5,14 @@ import { Image } from "@nextui-org/image";
 import { Divider } from "@nextui-org/divider";
 import { Card, CardFooter } from "@nextui-org/card";
 
-import { usePosts } from "@/hooks/use-query";
+import { useCategories, usePosts, useTags } from "@/hooks/use-query";
 import { BlogListItem } from "@/components/blog-list-item";
+import { Chip } from "@nextui-org/chip";
 
 export default function IndexPage() {
-  const { data } = usePosts();
+  const posts = usePosts();
+  const tags = useTags();
+  const categories = useCategories();
 
   return (
     <DefaultLayout>
@@ -19,9 +22,49 @@ export default function IndexPage() {
           <CardGrid className="max-sm:hidden" />
         </div>
         <Divider className="my-8" />
-        <div className="flex flex-col columns-2">
-          <div className="flex flex-col">
-            {data?.map((post) => <BlogListItem post={post}></BlogListItem>)}
+        <div className="flex columns-2">
+          <div className="flex flex-col mr-20">
+            {posts.data?.map((post) => (
+              <BlogListItem post={post} key={post.key}></BlogListItem>
+            ))}
+          </div>
+          <div className="flex flex-col ml-20">
+            <div className="flex flex-col mb-5">
+              <div className="prose dark:prose-invert text-[1rem] font-semibold mb-2">
+                {"Tags"}
+              </div>
+              <div className="flex flex-row">
+                {tags.data?.map((tag, index) => (
+                  <Chip
+                    classNames={{
+                      base: "mx-1 border dark:border-white/50",
+                    }}
+                    key={index}
+                    variant="flat"
+                  >
+                    {`#${tag}`}
+                  </Chip>
+                ))}
+              </div>
+            </div>
+            <div className="flex flex-col">
+              <div className="prose dark:prose-invert text-[1rem] font-semibold mb-2">
+                {"Categories"}
+              </div>
+              <div className="flex flex-row">
+                {categories.data?.map((category, index) => (
+                  <Chip
+                    classNames={{
+                      base: "mx-1 border dark:border-white/50",
+                    }}
+                    key={index}
+                    variant="flat"
+                  >
+                    {`${category}`}
+                  </Chip>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

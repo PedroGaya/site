@@ -6,7 +6,7 @@ export function BlogListItem(props: { post: BlogPost }) {
   const { post } = props;
 
   return (
-    <div className="flex-column my-3">
+    <div className="flex-column mb-8">
       <div className="">
         <div className={blogListItem({ title: true })}>{post.title}</div>
         <div className={blogListItem({ date: true })}>
