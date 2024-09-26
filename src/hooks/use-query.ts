@@ -6,21 +6,25 @@ import { createQuery } from "react-query-kit";
 export const useCategories = createQuery<string[], void, Error>({
   queryKey: ["/categories"],
   fetcher: fetchCategories,
+  staleTime: 10 * 60 * 1000,
 });
 
 export const useSeries = createQuery<string[], void, Error>({
   queryKey: ["/series"],
   fetcher: fetchSeries,
+  staleTime: 10 * 60 * 1000,
 });
 
 export const useTags = createQuery<string[], void, Error>({
   queryKey: ["/tags"],
   fetcher: fetchTags,
+  staleTime: 10 * 60 * 1000,
 });
 
 export const usePosts = createQuery<BlogPost[], void, Error>({
   queryKey: ["/posts"],
   fetcher: fetchPosts,
+  staleTime: 10 * 60 * 1000,
 });
 
 // Fetchers
