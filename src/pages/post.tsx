@@ -7,8 +7,6 @@ import javascript from "react-syntax-highlighter/dist/esm/languages/prism/javasc
 SyntaxHighlighter.registerLanguage("js", javascript);
 import { okaidia } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
-import { Chip } from "@nextui-org/chip";
-
 import { article } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 
@@ -16,18 +14,18 @@ import { type BlogPost } from "@/types";
 import { useState } from "react";
 import { LinkChip } from "@/components/link-chip";
 
-export default function BlogPost(props: { post: BlogPost }) {
+export function BlogPostPage(props: { post: BlogPost | undefined }) {
   const { post } = props;
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10">
         <div className="inline-block max-w-lg text-center justify-center">
-          <h1 className={article({ title: true })}>{post.title}</h1>
-          <h1 className={article({ subtitle: true })}>{post.subtitle}</h1>
+          <h1 className={article({ title: true })}>{post?.title}</h1>
+          <h1 className={article({ subtitle: true })}>{post?.subtitle}</h1>
         </div>
-        <Markdown content={post.content} />
+        <Markdown content={post?.content ?? ""} />
         <div>
-          {post.tags.map((tag, index) => (
+          {post?.tags.map((tag, index) => (
             <LinkChip content={tag} link={"/blog"} key={index} />
           ))}
         </div>

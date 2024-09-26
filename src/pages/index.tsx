@@ -35,7 +35,7 @@ export default function IndexPage() {
               </div>
               <div className="flex flex-row flex-wrap">
                 {tags.data?.map((tag, index) => (
-                  <LinkChip content={`#${tag}`} link={"/blog"} key={index} />
+                  <LinkChip content={`#${tag}`} link={"/"} key={index} />
                 ))}
               </div>
             </div>
@@ -45,7 +45,7 @@ export default function IndexPage() {
               </div>
               <div className="flex flex-row">
                 {categories.data?.map((category, index) => (
-                  <LinkChip content={category} link={"/blog"} key={index} />
+                  <LinkChip content={category} link={"/"} key={index} />
                 ))}
               </div>
             </div>
@@ -65,7 +65,7 @@ function IntroductoryText() {
       </div>
       <div className={subtitle({ class: "mt-4" })}>
         On this site, you will find my{" "}
-        <Link className="text-lg lg:text-xl" href="/blog">
+        <Link className="text-lg lg:text-xl" href="/">
           writings
         </Link>{" "}
         about technical topics and personal projects, as well as music and other

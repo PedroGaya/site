@@ -15,7 +15,10 @@ export function BlogListItem(props: { post: BlogPost }) {
       </div>
       <div className={blogListItem({ subtitle: true })}>{post.subtitle}</div>
       <div className={blogListItem({ readMore: true })}>
-        <Link className={blogListItem({ readMore: true })} href="/blog">
+        <Link
+          className={blogListItem({ readMore: true })}
+          href={`/blog/${post.key}`}
+        >
           Read more
         </Link>
       </div>
