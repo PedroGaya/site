@@ -14,6 +14,7 @@ import DefaultLayout from "@/layouts/default";
 
 import { type BlogPost } from "@/types";
 import { useState } from "react";
+import { LinkChip } from "@/components/link-chip";
 
 export default function BlogPost(props: { post: BlogPost }) {
   const { post } = props;
@@ -27,15 +28,7 @@ export default function BlogPost(props: { post: BlogPost }) {
         <Markdown content={post.content} />
         <div>
           {post.tags.map((tag, index) => (
-            <Chip
-              classNames={{
-                base: "mx-1 border dark:border-white/50",
-              }}
-              key={index}
-              variant="flat"
-            >
-              {`#${tag}`}
-            </Chip>
+            <LinkChip content={tag} link={"/blog"} key={index} />
           ))}
         </div>
       </section>

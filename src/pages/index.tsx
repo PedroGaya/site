@@ -7,7 +7,7 @@ import { Card, CardFooter } from "@nextui-org/card";
 
 import { useCategories, usePosts, useTags } from "@/hooks/use-query";
 import { BlogListItem } from "@/components/blog-list-item";
-import { Chip } from "@nextui-org/chip";
+import { LinkChip } from "@/components/link-chip";
 
 export default function IndexPage() {
   const posts = usePosts();
@@ -28,40 +28,24 @@ export default function IndexPage() {
               <BlogListItem post={post} key={post.key}></BlogListItem>
             ))}
           </div>
-          <div className="flex flex-col ml-20">
+          <div className="flex flex-col ml-20  w-1/3 max-sm:hidden">
             <div className="flex flex-col mb-5">
               <div className="prose dark:prose-invert text-[1rem] font-semibold mb-2">
                 {"Tags"}
               </div>
-              <div className="flex flex-row">
+              <div className="flex flex-row flex-wrap">
                 {tags.data?.map((tag, index) => (
-                  <Chip
-                    classNames={{
-                      base: "mx-1 border dark:border-white/50",
-                    }}
-                    key={index}
-                    variant="flat"
-                  >
-                    {`#${tag}`}
-                  </Chip>
+                  <LinkChip content={`#${tag}`} link={"/blog"} key={index} />
                 ))}
               </div>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col flex-wrap">
               <div className="prose dark:prose-invert text-[1rem] font-semibold mb-2">
                 {"Categories"}
               </div>
               <div className="flex flex-row">
                 {categories.data?.map((category, index) => (
-                  <Chip
-                    classNames={{
-                      base: "mx-1 border dark:border-white/50",
-                    }}
-                    key={index}
-                    variant="flat"
-                  >
-                    {`${category}`}
-                  </Chip>
+                  <LinkChip content={category} link={"/blog"} key={index} />
                 ))}
               </div>
             </div>
