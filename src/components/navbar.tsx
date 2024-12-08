@@ -18,6 +18,7 @@ import { ThemeSwitch } from "@/components/theme-switch";
 import { GithubIcon, SearchIcon, TwitterIcon } from "@/components/icons";
 
 export const Navbar = () => {
+  // @ts-ignore
   const searchInput = (
     <Input
       aria-label="Search"
