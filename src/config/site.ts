@@ -13,12 +13,8 @@ export const siteConfig = {
       href: "/blog",
     },
     {
-      label: "Contact",
-      href: "/contact",
-    },
-    {
-      label: "Résumé",
-      href: "/resume",
+      label: "CV",
+      href: "/cv",
     },
   ],
   navMenuItems: [
@@ -27,16 +23,16 @@ export const siteConfig = {
       href: "/",
     },
     {
+      label: "About",
+      href: "/about-me",
+    },
+    {
       label: "Blog",
       href: "/blog",
     },
     {
-      label: "Contact",
-      href: "/contact",
-    },
-    {
-      label: "Résumé",
-      href: "/resume",
+      label: "CV",
+      href: "/cv",
     },
   ],
   links: {

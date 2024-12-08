@@ -69,17 +69,17 @@ function IntroductoryText() {
       </div>
       <div className={subtitle({ class: "mt-4" })}>
         On this site, you will find my{" "}
-        <Link className="text-lg lg:text-xl" href="/">
-          writings
+        <Link className="text-lg lg:text-xl" href="/blog">
+          writing
         </Link>{" "}
-        about technical topics and personal projects, as well as music and other
-        such things. You can also learn more{" "}
+        about technical topics, personal projects, music and other such things.
+        You can also learn more{" "}
         <Link className="text-lg lg:text-xl" href="/about-me">
           about me
         </Link>{" "}
-        or find my{" "}
-        <Link className="text-lg lg:text-xl" href="/contact">
-          contact information
+        or take a look at my{" "}
+        <Link className="text-lg lg:text-xl" href="/cv">
+          curriculum vitae
         </Link>
         .
       </div>
