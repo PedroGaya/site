@@ -3,6 +3,9 @@ import { Avatar } from "@nextui-org/avatar";
 import DefaultLayout from "@/layouts/default";
 import { Link } from "@nextui-org/link";
 
+import cv_en from "/cv-en.pdf";
+import cv_pt from "/cv-pt.pdf";
+
 export default function AboutPage() {
   return (
     <DefaultLayout>
@@ -47,14 +50,14 @@ export default function AboutPage() {
           </div>
           <div className="mt-20">
             <div className={article()}>
-              You can{" "}
+              For business concerns,{" "}
               <Link
                 className={article()}
                 href="mailto:pedrohenriquegaya@gmail.com"
               >
-                email me for business
+                email me
               </Link>
-              , or{" "}
+              {" or "}
               <Link
                 className={article()}
                 href="https://www.instagram.com/pedrohgayaw/"
@@ -62,6 +65,18 @@ export default function AboutPage() {
                 talk to me on instagram
               </Link>
               .
+            </div>
+            <div className={article()}>
+              If you're a recruiter, you can download my <i>curriculum vitae</i>{" "}
+              in{" "}
+              <Link className={article()} href={cv_en} target="_blank">
+                english
+              </Link>{" "}
+              or{" "}
+              <Link className={article()} href={cv_pt} target="_blank">
+                portuguese
+              </Link>{" "}
+              for more details.
             </div>
           </div>
         </div>
