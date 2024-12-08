@@ -4,7 +4,6 @@ import IndexPage from "@/pages/index";
 import PostPage from "@/pages/post";
 import AboutPage from "@/pages/about";
 import BlogPage from "@/pages/blog";
-import CurriculumPage from "@/pages/cv";
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
       <Route element={<BlogPage />} path="/blog/" />
       <Route element={<PostPage />} path="/blog/:key" />
       <Route element={<AboutPage />} path="/about-me" />
-      <Route element={<CurriculumPage />} path="/cv" />
     </Routes>
   );
 }
