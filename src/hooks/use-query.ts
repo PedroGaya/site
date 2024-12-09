@@ -29,7 +29,7 @@ export const usePosts = createQuery<BlogPost[], void, Error>({
 
 // Fetchers
 export async function fetchCategories(): Promise<string[]> {
-  const url = "http://54.88.165.9/categories";
+  const url = "https://api.phgw.dev/categories";
 
   const response = await fetch(url);
   if (!response.ok) {
@@ -41,7 +41,7 @@ export async function fetchCategories(): Promise<string[]> {
 }
 
 export async function fetchTags(): Promise<string[]> {
-  const url = "http://54.88.165.9/tags";
+  const url = "https://api.phgw.dev/tags";
 
   const response = await fetch(url);
   if (!response.ok) {
@@ -53,7 +53,7 @@ export async function fetchTags(): Promise<string[]> {
 }
 
 export async function fetchSeries(): Promise<string[]> {
-  const url = "http://54.88.165.9/series";
+  const url = "https://api.phgw.dev/series";
 
   const response = await fetch(url);
   if (!response.ok) {
@@ -65,7 +65,7 @@ export async function fetchSeries(): Promise<string[]> {
 }
 
 export async function fetchPosts(): Promise<BlogPost[]> {
-  const url = "http://54.88.165.9/posts";
+  const url = "https://api.phgw.dev/posts";
 
   const response = await fetch(url);
   if (!response.ok) {
