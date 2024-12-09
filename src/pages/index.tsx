@@ -38,7 +38,7 @@ export default function IndexPage() {
                 </div>
                 <div className="flex flex-row flex-wrap">
                   {tags.data?.map((tag, index) => (
-                    <LinkChip content={`#${tag}`} link={"/"} key={index} />
+                    <LinkChip content={`#${tag}`} link={"/blog"} key={index} />
                   ))}
                 </div>
               </div>
@@ -48,7 +48,7 @@ export default function IndexPage() {
                 </div>
                 <div className="flex flex-row">
                   {categories.data?.map((category, index) => (
-                    <LinkChip content={category} link={"/"} key={index} />
+                    <LinkChip content={category} link={"/blog"} key={index} />
                   ))}
                 </div>
               </div>
@@ -76,12 +76,8 @@ function IntroductoryText() {
         You can also learn more{" "}
         <Link className="text-lg lg:text-xl" href="/about-me">
           about me
-        </Link>{" "}
-        or take a look at my{" "}
-        <Link className="text-lg lg:text-xl" href="/cv">
-          curriculum vitae
         </Link>
-        .
+        {"."}
       </div>
     </div>
   );
